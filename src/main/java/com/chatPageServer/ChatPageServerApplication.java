@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class ChatPageServerApplication{
-    public static void main(String[] args) {
-      SpringApplication.run(ChatPageServerApplication.class, args);
-    }
+public class ChatPageServerApplication {
+  public static void main(String[] args) {
+    SpringApplication.run(ChatPageServerApplication.class, args);
+  }
 
-    @GetMapping("/hello")
-    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-      return String.format("Hello %s!", name);
-    }
-    
-    @PostMapping("/login")
-    @CrossOrigin(origins = "http://localhost:9500")
-    public String login(@RequestBody User user) {
-      System.out.println(user.username);
-      return String.format("Hello");
-    }
+  @GetMapping("/hello")
+  public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+    return String.format("Hello %s!", name);
+  }
+
+  @PostMapping("/login")
+  @CrossOrigin(origins = "http://localhost:9500")
+  public String login(@RequestBody User user) {
+    System.out.println(user.username);
+    return String.format("Hello");
+  }
 }
