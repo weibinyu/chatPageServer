@@ -1,4 +1,4 @@
-package com.chatPageServer;
+package com.chatPageServer.model;
 
 public class User {
     String username;
@@ -11,5 +11,13 @@ public class User {
 
         this.username = username;
         this.password = password;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getPassword() {
+        return this.password;
     }
 }
